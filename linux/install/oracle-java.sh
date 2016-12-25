@@ -74,7 +74,7 @@ fi
 /bin/echo -e "\nexport JAVA_HOME=$JAVA_HOME\n" >> $env_sh_filepath
 /bin/echo -e "\nsetenv JAVA_HOME \"$JAVA_HOME\"\n" >> $env_csh_filepath
 
-/bin/echo -e "\nexport PATH=$PATH:$JAVA_HOME/bin\n" >> $env_sh_filepath
-/bin/echo -e "\nsetenv PATH \"$PATH:$JAVA_HOME/bin\"\n" >> $env_csh_filepath
+/bin/echo -e "\nexport PATH=\$PATH:$JAVA_HOME/bin\n" >> $env_sh_filepath
+/bin/echo -e "\nsetenv PATH \"\$PATH:$JAVA_HOME/bin\"\n" >> $env_csh_filepath
 
 chmod 644 $env_sh_filepath $env_csh_filepath
