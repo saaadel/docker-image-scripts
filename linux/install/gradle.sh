@@ -33,7 +33,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
 /bin/echo -e "\nexport GRADLE_HOME=$GRADLE_HOME\n" >> $env_sh_filepath
 /bin/echo -e "\nsetenv GRADLE_HOME \"$GRADLE_HOME\"\n" >> $env_csh_filepath
 
-/bin/echo -e "\nexport PATH=$PATH:$GRADLE_HOME/bin\n" >> $env_sh_filepath
-/bin/echo -e "\nsetenv PATH \"$PATH:$GRADLE_HOME/bin\"\n" >> $env_csh_filepath
+/bin/echo -e "\nexport PATH=\$PATH:$GRADLE_HOME/bin\n" >> $env_sh_filepath
+/bin/echo -e "\nsetenv PATH \"\$PATH:$GRADLE_HOME/bin\"\n" >> $env_csh_filepath
 
 chmod 644 $env_sh_filepath $env_csh_filepath
