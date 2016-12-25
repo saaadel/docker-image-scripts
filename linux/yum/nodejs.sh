@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ## Description: Install NodeJS
 
 ## HOW TO USE (as root):
