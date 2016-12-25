@@ -1,4 +1,5 @@
 #!/bin/bash
+## Description: Add defaults aliases for bash, configured to load .profile at top of .bash_profile for CURRENT user.
 
 ## HOW TO USE:
 # curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/bash-defaults.sh | bash /dev/stdin
