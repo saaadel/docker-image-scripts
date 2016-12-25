@@ -17,7 +17,7 @@ jdk8=http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.t
 
 
 [ -z $bundle ] && bundle='jdk8'
-[ -z $bundle_url ] && bundle_url=`echo ${$bundle}`
+[ -z $bundle_url ] && bundle_url=$(eval echo "\$${bundle}")
 
 ## Comment following line if it is JRE, and uncomment if it's JDK.
 #jdk=1
