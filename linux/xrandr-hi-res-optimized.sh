@@ -26,5 +26,5 @@ curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/xrandr-echo-
 
 # VNC WINDOW MAXIMIZED
 # 1712x900 59.92 Hz (CVT) hsync: 55.96 kHz; pclk: 126.25 MHz
-Modeline "1712x900_60.00"  126.25  1712 1808 1984 2256  900 903 913 934 -hsync +vsync
+# Modeline "1712x900_60.00"  126.25  1712 1808 1984 2256  900 903 913 934 -hsync +vsync
 curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/xrandr-set-newmode.sh | bash /dev/stdin 1706 900
