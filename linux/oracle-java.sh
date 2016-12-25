@@ -1,7 +1,9 @@
-#!/bin/bash
+#!/bin/bash -xv
 ## Description: Install Oracle Java and set is as default java interpreter.
 
 ## HOW TO USE (as root):
+# curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/oracle-java.sh | bash /dev/stdin
+## OR
 # curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/oracle-java.sh | bash /dev/stdin
 
 
