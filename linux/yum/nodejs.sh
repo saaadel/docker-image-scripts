@@ -2,9 +2,9 @@
 ## Description: Install NodeJS
 
 ## HOW TO USE (as root):
-# curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/nodejs.sh | bash /dev/stdin
+# curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/nodejs.sh | bash /dev/stdin
 ## OR
-# bundle=nodejs7 bash -c 'curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/nodejs.sh | bash /dev/stdin'
+# bundle=nodejs7 bash -c 'curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/nodejs.sh | bash /dev/stdin'
 
 
 nodejs7=https://rpm.nodesource.com/setup_7.x
