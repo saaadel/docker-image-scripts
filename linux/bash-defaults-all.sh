@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## HOW TO USE:
-# sudo bash -c "curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/bash-defaults.sh | bash /dev/stdin"
+# sudo bash -c "curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/bash-defaults-all.sh | bash /dev/stdin"
 
 
 ## Load .profile in .bash_profile at top 
