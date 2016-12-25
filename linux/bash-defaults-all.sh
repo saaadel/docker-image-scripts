@@ -1,8 +1,8 @@
 #!/bin/bash
 ## Description: Add defaults aliases for bash, configured to load .profile at top of .bash_profile for ROOT and all NEW users.
 
-## HOW TO USE:
-# sudo bash -c "curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/bash-defaults-all.sh | bash /dev/stdin"
+## HOW TO USE (as root):
+# curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/bash-defaults-all.sh | bash /dev/stdin
 
 
 ## Load .profile in .bash_profile at top 
