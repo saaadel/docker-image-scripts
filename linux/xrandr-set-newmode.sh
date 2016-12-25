@@ -1,4 +1,6 @@
 #!/bin/bash
+## Description: Create a new mode, add it, and set it as current. Configured for VNC by default.
+
 
 if [[ -z "$output" ]]; then
     output=VNC-0
