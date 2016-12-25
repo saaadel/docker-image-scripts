@@ -4,7 +4,7 @@
 ## HOW TO USE (as root):
 # curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/oracle-java.sh | bash /dev/stdin
 ## OR
-# curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/oracle-java.sh | bash /dev/stdin
+# bundle=jdk7 bash -c 'curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/oracle-java.sh | bash /dev/stdin'
 
 
 # Java 7
