@@ -1,10 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
 ## Description: Test for yum or apt based linux
 
 ## HOW TO USE:
-# . /dev/stdin << 'EOF'
-# $( curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/pkg-manager-bash.sh )
-# EOF
+# . <( curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/pkg-manager-bash.sh )
 
 
 export IS_YUM_PKG_MANAGER=`command -v yum &>/dev/null && echo 1 || echo ''`
