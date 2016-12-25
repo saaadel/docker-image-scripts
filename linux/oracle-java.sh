@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 ## Description: Install Oracle Java and set is as default java interpreter.
 
 ## HOW TO USE (as root):
