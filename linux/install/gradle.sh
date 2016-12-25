@@ -15,9 +15,7 @@ gradle3=https://services.gradle.org/distributions/gradle-3.2.1-bin.zip
 env_sh_filepath=/etc/profile.d/gradle-env.sh
 env_csh_filepath=/etc/profile.d/gradle-env.csh
 
-yum install -y --setopt=tsflags=nodocs unzip
-yum clean all
-rm -rf /var/cache/yum/*
+curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin unzip
 
 rm -rf /tmp/curl.tmp
 curl -sjkLo /tmp/curl.tmp "${bundle_url}"
