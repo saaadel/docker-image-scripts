@@ -1,5 +1,5 @@
 #!/bin/bash
-## Description: Test for yum or apt based linux
+## Description: Test for yum or apt based linux (requires which command)
 
 ## HOW TO USE:
 # named_pipe=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32` && mkfifo $named_pipe && (curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/pkg-manager-which.sh > $named_pipe &) && . /dev/stdin < $named_pipe && rm -f $named_pipe
