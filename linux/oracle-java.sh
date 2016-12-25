@@ -29,8 +29,6 @@ env_sh_filepath=/etc/profile.d/java-env.sh
 env_csh_filepath=/etc/profile.d/java-env.csh
 
 rm -rf /tmp/curl.tmp
-
-## cURL downloads it with redirects, so do not use pipe here
 curl -o /tmp/curl.tmp -jH "Cookie: oraclelicense=accept-securebackup-cookie" -kL "${bundle_url}"
 
 ## tar.gz with one directory only inside
