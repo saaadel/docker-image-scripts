@@ -15,7 +15,7 @@ jre8=http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jre-8u112-linux-x64.t
 server_jre8=http://download.oracle.com/otn-pub/java/jdk/8u112-b15/server-jre-8u112-linux-x64.tar.gz
 jdk8=http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.tar.gz
 
-url='${jdk8}'
+url=`echo ${jdk8}`
 
 ## Comment following line if it is JRE, and uncomment if it's JDK.
 #jdk=1
