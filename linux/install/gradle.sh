@@ -23,9 +23,9 @@ rm -rf /tmp/curl.tmp
 curl -sjkLo /tmp/curl.tmp "${bundle_url}"
 
 ## tar.gz with one directory only inside
-dirname=`tar -ztf /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
+dirname=`zipinfo -1 /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
 
-unzip /tmp/curl.tmp -d /opt
+unzip -oqq /tmp/curl.tmp -d /opt
 rm -rf /tmp/curl.tmp
 
 export GRADLE_HOME=/opt/${dirname}
