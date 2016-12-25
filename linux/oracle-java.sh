@@ -34,7 +34,7 @@ rm -rf /tmp/curl.tmp
 curl -o /tmp/curl.tmp -jH "Cookie: oraclelicense=accept-securebackup-cookie" -kL "${bundle_url}"
 
 ## tar.gz with one directory only inside
-javadirname=`tar -ztf /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1`
+javadirname=`tar -ztf /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
 
 tar -xzf /tmp/curl.tmp -C /opt
 rm -rf /tmp/curl.tmp
