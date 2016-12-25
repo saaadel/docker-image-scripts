@@ -6,7 +6,7 @@
 
 
 ## Load .profile in .bash_profile at top 
-sed -i 's/# \.bash_profile/# \.bash_profile\nif [ -f ~\/.profile ]; then\n        . ~\/.profile\nfi\n/' ~/.bash_profile
+#sed -i 's/# \.bash_profile/# \.bash_profile\nif [ -f ~\/.profile ]; then\n        . ~\/.profile\nfi\n/' ~/.bash_profile
 
 ## Adds interactive, links, colors, and safe access for bash
 /bin/echo -e "\n\
