@@ -21,10 +21,6 @@ jdk8=http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.t
 [ -z $bundle ] && bundle='jdk8'
 [ -z $bundle_url ] && bundle_url=$(eval echo "\$${bundle}")
 
-## Comment following line if it is JRE, and uncomment if it's JDK.
-#jdk=1
-
-
 env_sh_filepath=/etc/profile.d/java-env.sh
 env_csh_filepath=/etc/profile.d/java-env.csh
 
@@ -33,6 +29,8 @@ curl -o /tmp/curl.tmp -jH "Cookie: oraclelicense=accept-securebackup-cookie" -kL
 
 ## tar.gz with one directory only inside
 javadirname=`tar -ztf /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
+
+[ "$javadirname" != "${javadirname#*jdk}" ] && jdk=1
 
 tar -xzf /tmp/curl.tmp -C /opt
 rm -rf /tmp/curl.tmp
