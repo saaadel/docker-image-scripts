@@ -1,4 +1,5 @@
 #!/bin/bash
+## Description: Create new optimized modes for fullscreen and maximized VNC window, add them, and set minimal Hi-Res mode as current. Configured for VNC by default.
 
 ## HOW TO USE:
 # curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/xrandr-hi-res-optimized.sh | bash /dev/stdin
