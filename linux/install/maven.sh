@@ -2,9 +2,9 @@
 ## Description: Install Maven.
 
 ## HOW TO USE (as root):
-# curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | bash /dev/stdin
+# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | bash /dev/stdin
 ## OR
-# bundle=maven3 bash -c 'curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | bash /dev/stdin'
+# bundle=maven3 bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | bash /dev/stdin'
 
 
 maven3=http://www-us.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
@@ -15,9 +15,8 @@ maven3=http://www-us.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3
 env_sh_filepath=/etc/profile.d/maven-env.sh
 env_csh_filepath=/etc/profile.d/maven-env.csh
 
-yum install -y --setopt=tsflags=nodocs unzip
-yum clean all
-rm -rf /var/cache/yum/*
+
+curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin unzip
 
 rm -rf /tmp/curl.tmp
 curl -sjkLo /tmp/curl.tmp "${bundle_url}"
