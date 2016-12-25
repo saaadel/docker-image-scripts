@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ## Description: Test for yum or apt based linux (requires which command)
 
 ## HOW TO USE:
