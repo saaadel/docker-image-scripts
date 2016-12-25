@@ -2,9 +2,9 @@
 ## Description: Install Oracle Java and set is as default java interpreter.
 
 ## HOW TO USE (as root):
-# curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | bash /dev/stdin
+# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | bash /dev/stdin
 ## OR
-# bundle=jdk7 bash -c 'curl https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | bash /dev/stdin'
+# bundle=jdk7 bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | bash /dev/stdin'
 
 
 # Java 7
@@ -25,7 +25,7 @@ env_sh_filepath=/etc/profile.d/java-env.sh
 env_csh_filepath=/etc/profile.d/java-env.csh
 
 rm -rf /tmp/curl.tmp
-curl -o /tmp/curl.tmp -jH "Cookie: oraclelicense=accept-securebackup-cookie" -kL "${bundle_url}"
+curl -sjkLo /tmp/curl.tmp -H "Cookie: oraclelicense=accept-securebackup-cookie" "${bundle_url}"
 
 ## tar.gz with one directory only inside
 javadirname=`tar -ztf /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
