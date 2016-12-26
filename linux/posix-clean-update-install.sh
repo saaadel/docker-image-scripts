@@ -4,7 +4,7 @@
 ## HOW TO USE:
 # curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin [package1 [package2...]]
 
-named_pipe=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32` && mkfifo $named_pipe && (curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/pkg-manager-which.sh > $named_pipe &) && . /dev/stdin < $named_pipe && rm -f $named_pipe
+named_pipe=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32` && mkfifo $named_pipe && (curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-check-pkg-manager.sh > $named_pipe &) && . /dev/stdin < $named_pipe && rm -f $named_pipe
 
 if [[ -n $IS_YUM_PKG_MANAGER ]]; then
     curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/clean-update-install.sh | sh /dev/stdin $*
