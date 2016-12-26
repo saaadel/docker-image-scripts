@@ -1,5 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 ## Description: Create a new mode, add it, and echo it in stdout. Configured for VNC by default.
+
+
+## HOW TO USE:
+# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/xrandr-echo-newmode.sh | sh /dev/stdin
 
 
 if [[ -z "$output" ]]; then
