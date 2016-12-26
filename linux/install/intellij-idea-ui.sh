@@ -30,3 +30,6 @@ export PATH=$PATH:$IDEA_HOME/bin
 /bin/echo -e "\nsetenv PATH \"\$PATH:$IDEA_HOME/bin\"\n" >> $env_csh_filepath
 
 chmod 644 $env_sh_filepath $env_csh_filepath
+
+# /opt/${dirname}/bin/idea.sh &
+
