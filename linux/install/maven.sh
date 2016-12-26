@@ -27,8 +27,8 @@ rm -rf /tmp/curl.tmp
 
 export M2_HOME=/opt/${dirname}
 export PATH=$PATH:$M2_HOME/bin
-/bin/echo -e "\nexport M2_HOME=$M2_HOME\n" >> $env_sh_filepath
-/bin/echo -e "\nsetenv M2_HOME \"$M2_HOME\"\n" >> $env_csh_filepath
+/bin/echo -e "\nexport M2_HOME=$M2_HOME\n" > $env_sh_filepath
+/bin/echo -e "\nsetenv M2_HOME \"$M2_HOME\"\n" > $env_csh_filepath
 
 /bin/echo -e "\nexport PATH=\$PATH:$M2_HOME/bin\n" >> $env_sh_filepath
 /bin/echo -e "\nsetenv PATH \"\$PATH:$M2_HOME/bin\"\n" >> $env_csh_filepath
