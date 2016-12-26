@@ -2,9 +2,9 @@
 ## Description: Install Intellij IDEA Ultimate.
 
 ## HOW TO USE (as root):
-# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-ui.sh | bash /dev/stdin
+# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | bash /dev/stdin
 ## OR
-# bundle=intellij_idea_2016_3 bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-ui.sh | bash /dev/stdin'
+# bundle=intellij_idea_2016_3 bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | bash /dev/stdin'
 
 
 intellij_idea_2016_3=https://download.jetbrains.com/idea/ideaIU-2016.3.1.tar.gz
