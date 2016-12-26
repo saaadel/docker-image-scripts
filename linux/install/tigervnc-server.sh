@@ -4,7 +4,7 @@
 ## HOW TO USE (as root):
 # curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | sh /dev/stdin
 ## OR
-# vncpassword=passw0rd bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | sh /dev/stdin'
+# vncpassword=passw0rd sh -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | sh /dev/stdin'
 
 
 [ -z $vncpassword ] && vncpassword=''
