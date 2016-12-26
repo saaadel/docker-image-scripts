@@ -1,8 +1,14 @@
 #!/bin/bash
 ## Description: Install VNC
 
+## HOW TO USE (as root):
+# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/vnc.sh | bash /dev/stdin
+## OR
+# vncpassword=passw0rd bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/vnc.sh | bash /dev/stdin'
+
+
 [ -z $vncpassword ] && vncpassword=''
-[ -z $user ] && user='user'
+[ -z $USER ] && export USER='user'
 [ -z $uid ] && uid='1001'
 [ -z $gid ] && gid='0'
 [ -z $sudoersgroup ] && sudoersgroup='wheel'
@@ -15,21 +21,21 @@ yum clean all && rm -rf /var/cache/yum/*
 /bin/dbus-uuidgen --ensure
 
 export DISPLAY=":1"
-export HOME=/home/${user}
+export HOME=/home/${USER}
 
-useradd -u ${uid} -r -g ${gid} -d ${HOME} -s /bin/bash ${user} && \
-passwd -d ${user} && \
-usermod -a -G ${sudoersgroup} ${user} && \
+useradd -u ${uid} -r -g ${gid} -d ${HOME} -s /bin/bash ${USER} && \
+passwd -d ${USER} && \
+usermod -a -G ${sudoersgroup} ${USER} && \
 [ ! -d ${HOME}/.vnc ] && mkdir -p ${HOME}/.vnc
 
 /bin/echo -e "#!/bin/sh\n\
 \n\
 \x23 unset DBUS_SESSION_BUS_ADDRESS\n\
 \n\
-\x23 Run it before for clipboard support\n\
+\x23# Run it before for clipboard support\n\
 [ -x  /usr/bin/vncconfig ] && /usr/bin/vncconfig -iconic &\n\
 \n\
-\x23 Uncomment the following two lines for normal desktop:\n\
+\x23# Uncomment the following two lines for normal desktop:\n\
 unset SESSION_MANAGER\n\
 \x23 exec /etc/X11/xinit/xinitrc\n\
 \n\
@@ -46,7 +52,7 @@ if test -z \"\$DBUS_SESSION_BUS_ADDRESS\" ; then\n\
 	\$DBUS_SESSION_BUS_ADDRESS\"\n\
 fi\n\
 \n\
-\x23 Add autostart soft here: /path/to/file &
+\x23# Add your soft here: /path/to/file &\n\
 \n\
 exec sudo /usr/bin/gnome-session\n\
 " >> ${HOME}/.vnc/xstartup
@@ -61,5 +67,5 @@ chmod 777 /mnt/external-dir
 
 # EXPOSE 5901
 # LABEL io.openshift.expose-services="5901:tcp"
-# USER ${user}
+# USER ${USER}
 ## /usr/bin/vncserver -fg
