@@ -4,7 +4,7 @@
 ## HOW TO USE (as root):
 # curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh /dev/stdin
 ## OR
-# bundle=intellij_idea_2016_3 bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh /dev/stdin'
+# bundle=intellij_idea_2016_3 sh -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh /dev/stdin'
 
 
 intellij_idea_2016_3=https://download.jetbrains.com/idea/ideaIU-2016.3.1.tar.gz
