@@ -2,9 +2,9 @@
 ## Description: Install VNC (tigervnc-server)
 
 ## HOW TO USE (as root):
-# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/vnc.sh | bash /dev/stdin
+# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | bash /dev/stdin
 ## OR
-# vncpassword=passw0rd bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/vnc.sh | bash /dev/stdin'
+# vncpassword=passw0rd bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | bash /dev/stdin'
 
 
 [ -z $vncpassword ] && vncpassword=''
