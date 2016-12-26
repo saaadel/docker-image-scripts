@@ -11,7 +11,7 @@ RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/in
 
 RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | bash /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-ui.sh | bash /dev/stdin
+RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | bash /dev/stdin
 
 RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | bash /dev/stdin
 
