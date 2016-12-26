@@ -1,5 +1,5 @@
 #!/bin/bash
-## Description: Install VNC
+## Description: Install VNC (tigervnc-server)
 
 ## HOW TO USE (as root):
 # curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/vnc.sh | bash /dev/stdin
