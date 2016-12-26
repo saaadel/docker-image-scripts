@@ -28,7 +28,7 @@ rm -rf /tmp/curl.tmp
 curl -sjkLo /tmp/curl.tmp -H "Cookie: oraclelicense=accept-securebackup-cookie" "${bundle_url}"
 
 ## tar.gz with one directory only inside
-javadirname=`tar -ztf /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
+javadirname=`tar -ztf /tmp/curl.tmp | awk -F/ '{print $1}' | uniq | tail -1 | sed 's:/*$::'`
 
 [ "$javadirname" != "${javadirname#*jdk}" ] && jdk=1
 
