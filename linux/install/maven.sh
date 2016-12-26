@@ -16,15 +16,13 @@ env_sh_filepath=/etc/profile.d/maven-env.sh
 env_csh_filepath=/etc/profile.d/maven-env.csh
 
 
-curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin unzip
-
 rm -rf /tmp/curl.tmp
 curl -sjkLo /tmp/curl.tmp "${bundle_url}"
 
 ## tar.gz with one directory only inside
-dirname=`zipinfo -1 /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
+dirname=`tar -ztf /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
 
-unzip -oqq /tmp/curl.tmp -d /opt
+tar -xzf /tmp/curl.tmp -d /opt
 rm -rf /tmp/curl.tmp
 
 export M2_HOME=/opt/${dirname}
