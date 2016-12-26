@@ -1,19 +1,19 @@
 FROM oraclelinux:latest
 
 ## Install 'which' for next calls
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/clean-update-install.sh | sh /dev/stdin
+RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/clean-update-install.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/nodejs.sh | sh /dev/stdin
+RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/nodejs.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | sh /dev/stdin
+RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | sh /dev/stdin
+RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | sh /dev/stdin
+RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh /dev/stdin
+RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | sh /dev/stdin
+RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | sh -x /dev/stdin
 
 RUN . /etc/profile.d/java-env.sh && \
     . /etc/profile.d/maven-env.sh && \
