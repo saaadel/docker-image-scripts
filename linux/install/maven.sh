@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 ## Description: Install Maven.
 
 ## HOW TO USE (as root):
-# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | bash /dev/stdin
+# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | sh /dev/stdin
 ## OR
-# bundle=maven3 bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | bash /dev/stdin'
+# bundle=maven3 bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | sh /dev/stdin'
 
 
 maven3=http://www-us.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
