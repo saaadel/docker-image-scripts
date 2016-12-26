@@ -55,7 +55,7 @@ fi\n\
 \x23# Add your soft here: /path/to/file &\n\
 \n\
 exec sudo /usr/bin/gnome-session\n\
-" >> ${HOME}/.vnc/xstartup
+" > ${HOME}/.vnc/xstartup
 
 /bin/echo "${vncpassword}" | vncpasswd -f > ${HOME}/.vnc/passwd
 
