@@ -22,7 +22,7 @@ curl -sjkLo /tmp/curl.tmp "${bundle_url}"
 ## tar.gz with one directory only inside
 dirname=`tar -ztf /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
 
-tar -xzf /tmp/curl.tmp -d /opt
+tar -xzf /tmp/curl.tmp -C /opt
 rm -rf /tmp/curl.tmp
 
 export M2_HOME=/opt/${dirname}
