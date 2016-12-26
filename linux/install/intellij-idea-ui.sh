@@ -12,6 +12,9 @@ intellij_idea_2016_3=https://download.jetbrains.com/idea/ideaIU-2016.3.1.tar.gz
 [ -z $bundle ] && bundle='intellij_idea_2016_3'
 [ -z $bundle_url ] && bundle_url=$(eval echo "\$${bundle}")
 
+env_sh_filepath=/etc/profile.d/gradle-env.sh
+env_csh_filepath=/etc/profile.d/gradle-env.csh
+
 rm -rf /tmp/curl.tmp
 curl -sjkLo /tmp/curl.tmp "${bundle_url}"
 
