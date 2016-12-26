@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 ## Description: Install Gradle.
 
 ## HOW TO USE (as root):
-# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | bash /dev/stdin
+# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | sh /dev/stdin
 ## OR
-# bundle=gradle3 bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | bash /dev/stdin'
+# bundle=gradle3 bash -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | sh /dev/stdin'
 
 
 gradle3=https://services.gradle.org/distributions/gradle-3.2.1-bin.zip
