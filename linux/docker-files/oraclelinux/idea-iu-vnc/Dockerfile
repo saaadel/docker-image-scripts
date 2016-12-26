@@ -15,6 +15,8 @@ RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/in
 
 RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | bash /dev/stdin
 
+# TODO add IDEA in VNC autostart
+
 VOLUME /mnt/docker-volume
 EXPOSE 5901
 LABEL io.openshift.expose-services="5901:tcp"
