@@ -26,8 +26,8 @@ rm -rf /tmp/curl.tmp
 
 export IDEA_HOME=/opt/${dirname}
 export PATH=$PATH:$IDEA_HOME/bin
-/bin/echo -e "\nexport IDEA_HOME=$IDEA_HOME\n" >> $env_sh_filepath
-/bin/echo -e "\nsetenv IDEA_HOME \"$IDEA_HOME\"\n" >> $env_csh_filepath
+/bin/echo -e "\nexport IDEA_HOME=$IDEA_HOME\n" > $env_sh_filepath
+/bin/echo -e "\nsetenv IDEA_HOME \"$IDEA_HOME\"\n" > $env_csh_filepath
 
 /bin/echo -e "\nexport PATH=\$PATH:$IDEA_HOME/bin\n" >> $env_sh_filepath
 /bin/echo -e "\nsetenv PATH \"\$PATH:$IDEA_HOME/bin\"\n" >> $env_csh_filepath
