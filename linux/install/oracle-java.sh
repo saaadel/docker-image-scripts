@@ -55,7 +55,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 /bin/echo -e "" > $env_csh_filepath
 
 # if JDK
-if [[ -n "$jdk" ]]; then
+if [ -n "$jdk" ]; then
     # compiler
     /usr/sbin/alternatives --install /usr/bin/javac javac /opt/${javadirname}/bin/javac 1
     /usr/sbin/alternatives --set javac /opt/${javadirname}/bin/javac
