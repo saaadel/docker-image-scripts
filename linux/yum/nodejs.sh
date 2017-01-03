@@ -9,8 +9,8 @@
 
 nodejs7=https://rpm.nodesource.com/setup_7.x
 
-[ -z $bundle ] && bundle='nodejs7'
-[ -z $bundle_url ] && bundle_url=$(eval echo "\$${bundle}")
+[ -z "$bundle" ] && bundle='nodejs7'
+[ -z "$bundle_url" ] && bundle_url=$(eval echo "\$${bundle}")
 
 curl -sjkL "${bundle_url}" | bash -
 yum install -y --setopt=tsflags=nodocs git subversion nodejs npm
