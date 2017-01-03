@@ -6,10 +6,10 @@
 
 named_pipe=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32` && mkfifo $named_pipe && (curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-check-pkg-manager.sh > $named_pipe &) && . /dev/stdin < $named_pipe && rm -f $named_pipe
 
-if [[ -n $IS_YUM_PKG_MANAGER ]]; then
+if [ -n $IS_YUM_PKG_MANAGER ]; then
     curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/clean-update-install.sh | sh /dev/stdin $*
 else
-    if [[ -n $IS_APT_GET_PKG_MANAGER ]]; then
+    if [ -n $IS_APT_GET_PKG_MANAGER ]; then
         curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/clean-update-install.sh | sh /dev/stdin $*
     fi
 fi
