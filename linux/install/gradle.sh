@@ -9,8 +9,8 @@
 
 gradle3=https://services.gradle.org/distributions/gradle-3.2.1-bin.zip
 
-[ -z $bundle ] && bundle='gradle3'
-[ -z $bundle_url ] && bundle_url=$(eval echo "\$${bundle}")
+[ -z "$bundle" ] && bundle='gradle3'
+[ -z "$bundle_url" ] && bundle_url=$(eval echo "\$${bundle}")
 
 env_sh_filepath=/etc/profile.d/gradle-env.sh
 env_csh_filepath=/etc/profile.d/gradle-env.csh
