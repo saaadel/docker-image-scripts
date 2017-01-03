@@ -9,8 +9,8 @@
 
 maven3=http://www-us.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
 
-[ -z $bundle ] && bundle='maven3'
-[ -z $bundle_url ] && bundle_url=$(eval echo "\$${bundle}")
+[ -z "$bundle" ] && bundle='maven3'
+[ -z "$bundle_url" ] && bundle_url=$(eval echo "\$${bundle}")
 
 env_sh_filepath=/etc/profile.d/maven-env.sh
 env_csh_filepath=/etc/profile.d/maven-env.csh
