@@ -7,11 +7,11 @@
 # vncpassword=passw0rd sh -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | sh /dev/stdin'
 
 
-[ -z $vncpassword ] && vncpassword=''
-[ -z $USER ] && export USER='user'
-[ -z $uid ] && uid='1001'
-[ -z $gid ] && gid='0'
-[ -z $sudoersgroup ] && sudoersgroup='wheel'
+[ -z "$vncpassword" ] && vncpassword=''
+[ -z "$USER" ] && export USER='user'
+[ -z "$uid" ] && uid='1001'
+[ -z "$gid" ] && gid='0'
+[ -z "$sudoersgroup" ] && sudoersgroup='wheel'
 
 # TODO replace on packets and universal call
 yum groupinstall -y --setopt=tsflags=nodocs "X Window System" "Fonts" && \
