@@ -6,10 +6,10 @@
 
 . <( curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/bash-check-pkg-manager.sh )
 
-if [[ -n $IS_YUM_PKG_MANAGER ]]; then
+if [[ -n "$IS_YUM_PKG_MANAGER" ]]; then
     curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/clean-update-install.sh | bash /dev/stdin $*
 else
-    if [[ -n $IS_APT_GET_PKG_MANAGER ]]; then
+    if [[ -n "$IS_APT_GET_PKG_MANAGER" ]]; then
         curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/clean-update-install.sh | bash /dev/stdin $*
     fi
 fi
