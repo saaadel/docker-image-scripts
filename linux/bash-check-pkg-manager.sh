@@ -2,7 +2,7 @@
 ## Description: Test for yum or apt based linux
 
 ## HOW TO USE:
-# . <( curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/pkg-manager-bash.sh )
+# . <( curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/bash-check-pkg-manager.sh )
 
 
 export IS_YUM_PKG_MANAGER=`command -v yum &>/dev/null && echo 1 || echo ''`
