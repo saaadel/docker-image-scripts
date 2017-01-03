@@ -18,8 +18,8 @@ server_jre8=http://download.oracle.com/otn-pub/java/jdk/8u112-b15/server-jre-8u1
 jdk8=http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.tar.gz
 
 
-[ -z $bundle ] && bundle='jdk8'
-[ -z $bundle_url ] && bundle_url=$(eval echo "\$${bundle}")
+[ -z "$bundle" ] && bundle='jdk8'
+[ -z "$bundle_url" ] && bundle_url=$(eval echo "\$${bundle}")
 
 env_sh_filepath=/etc/profile.d/java-env.sh
 env_csh_filepath=/etc/profile.d/java-env.csh
@@ -55,7 +55,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 /bin/echo -e "" > $env_csh_filepath
 
 # if JDK
-if [[ -n $jdk ]]; then
+if [[ -n "$jdk" ]]; then
     # compiler
     /usr/sbin/alternatives --install /usr/bin/javac javac /opt/${javadirname}/bin/javac 1
     /usr/sbin/alternatives --set javac /opt/${javadirname}/bin/javac
