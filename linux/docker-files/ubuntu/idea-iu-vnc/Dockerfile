@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 apt-get update && \
-apt-get --no-install-recommends install -y curl sudo which curl && \
+apt-get --no-install-recommends install -y curl which && \
 rm -rf /var/lib/apt/lists/*
 
 RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/nodejs.sh | sh -x /dev/stdin
