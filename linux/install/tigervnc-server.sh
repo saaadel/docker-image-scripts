@@ -11,6 +11,8 @@
 [ -z "$USER" ] && export USER='user'
 [ -z "$uid" ] && uid='1001'
 [ -z "$gid" ] && gid='0'
+
+[ -z "$sudoersgroup" ] && sudoersgroup=`cut -d: -f1 /etc/group | grep sudo`
 [ -z "$sudoersgroup" ] && sudoersgroup='wheel'
 
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
@@ -37,13 +39,16 @@ curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-c
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
      metacity
 
+#curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+#     xfce4 xfce4-goodies
+
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
      tigervnc-server
 
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
-     x11vnc x11vnc-data
+     tightvncserver
 
-/bin/dbus-uuidgen --ensure
+dbus-uuidgen --ensure
 
 export DISPLAY=":1"
 export HOME=/home/${USER}
@@ -53,7 +58,7 @@ passwd -d ${USER} && \
 usermod -a -G ${sudoersgroup} ${USER} && \
 [ ! -d ${HOME}/.vnc ] && mkdir -p ${HOME}/.vnc
 
-/bin/echo -e "#!/bin/sh\n\
+/bin/echo -en '\x23!/bin/sh\n'"\
 \n\
 \x23 unset DBUS_SESSION_BUS_ADDRESS\n\
 \n\
