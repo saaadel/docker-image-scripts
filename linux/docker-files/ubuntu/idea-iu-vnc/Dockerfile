@@ -43,4 +43,4 @@ USER user
 ENV USER=user HOME=/home/user DISPLAY=":1"
 CMD []
 #ENTRYPOINT ["/usr/bin/vncserver", "-fg"]
-ENTRYPOINT /usr/bin/vncserver && sleep 10 && waitpid=`ps | grep X[^\s]*vnc | tail -1 | awk '{print $1; }'` && sh -c "while ps -p $waitpid 1>/dev/null 2>&1; do sleep 10; done"
+ENTRYPOINT rm -rf /tmp/.X11-unix/* && rm -rf /tmp/.X*-lock && rm -rf /tmp/*.tmp && /usr/bin/vncserver && sleep 10 && waitpid=`ps | grep X[^\s]*vnc | tail -1 | awk '{print $1; }'` && sh -c "while ps -p $waitpid 1>/dev/null 2>&1; do sleep 10; done"
