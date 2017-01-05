@@ -2,9 +2,9 @@
 ## Description: Install Gradle.
 
 ## HOW TO USE (as root):
-# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | sh /dev/stdin
+# curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | sh /dev/stdin
 ## OR
-# bundle=gradle3 sh -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | sh /dev/stdin'
+# bundle=gradle3 sh -c 'curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | sh /dev/stdin'
 
 
 gradle3=https://services.gradle.org/distributions/gradle-3.2.1-bin.zip
@@ -15,10 +15,10 @@ gradle3=https://services.gradle.org/distributions/gradle-3.2.1-bin.zip
 env_sh_filepath=/etc/profile.d/gradle-env.sh
 env_csh_filepath=/etc/profile.d/gradle-env.csh
 
-curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin unzip
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin unzip
 
 rm -rf /tmp/curl.tmp
-curl -sjkLo /tmp/curl.tmp "${bundle_url}"
+curl -jkLo /tmp/curl.tmp "${bundle_url}"
 
 ## tar.gz with one directory only inside
 dirname=`zipinfo -1 /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
