@@ -6,6 +6,6 @@
 
 
 apt-get update && \
-( DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -yq install which || true ) && \
+( DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -yq install which 2>/dev/null || true ) && \
 DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -yq install curl $* && \
 rm -rf /var/lib/apt/lists/*
