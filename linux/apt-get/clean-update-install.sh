@@ -6,6 +6,6 @@
 
 
 apt-get update
-apt-get --no-install-recommends install -y which
-apt-get --no-install-recommends install -y curl $*
+DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends install -yq which
+DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends install -yq curl $*
 rm -rf /var/lib/apt/lists/*
