@@ -2,7 +2,7 @@
 ## Description: Do clean update, and install packages with yum, without any docs. Clear the cache at finish.
 
 ## HOW TO USE (as root):
-# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/clean-update-install.sh | sh /dev/stdin [package1 [package2...]]
+# curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/clean-update-install.sh | sh /dev/stdin [package1 [package2...]]
 
 
 yum clean all && \
