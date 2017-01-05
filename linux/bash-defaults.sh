@@ -2,7 +2,7 @@
 ## Description: Add defaults aliases for bash, configured to load .profile at top of .bash_profile for CURRENT user.
 
 ## HOW TO USE:
-# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/bash-defaults.sh | bash /dev/stdin
+# curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/bash-defaults.sh | bash /dev/stdin
 
 
 ## Adds interactive, links, colors, and safe access for bash
