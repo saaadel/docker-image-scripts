@@ -1,9 +1,9 @@
 FROM ubuntu:latest
 
-apt-get update
-apt-get --no-install-recommends install -y curl
-apt-get --no-install-recommends install -y which
-rm -rf /var/lib/apt/lists/*
+RUN apt-get update
+RUN apt-get --no-install-recommends install -y curl
+RUN apt-get --no-install-recommends install -y which
+RUN rm -rf /var/lib/apt/lists/*
 
 RUN curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/nodejs.sh | sh -x /dev/stdin
 
