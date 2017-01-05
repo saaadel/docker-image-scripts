@@ -32,7 +32,16 @@ curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-c
      fonts-freefont-ttf
 
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
-     tigervnc-server gnome-session metacity xterm sudo mc
+     gnome-session xterm sudo mc
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     metacity
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     tigervnc-server
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     x11vnc x11vnc-data
 
 /bin/dbus-uuidgen --ensure
 
