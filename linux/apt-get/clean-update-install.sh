@@ -6,5 +6,5 @@
 
 
 apt-get update && \
-apt-get --no-install-recommends install -y curl sudo which $* && \
+apt-get --no-install-recommends install -y curl sudo which curl $* && \
 rm -rf /var/lib/apt/lists/*
