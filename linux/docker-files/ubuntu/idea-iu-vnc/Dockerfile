@@ -42,4 +42,5 @@ LABEL io.openshift.expose-services="5901:tcp"
 USER user
 ENV USER=user HOME=/home/user DISPLAY=":1"
 CMD []
-ENTRYPOINT ["/usr/bin/vncserver", "-fg"]
+#ENTRYPOINT ["/usr/bin/vncserver", "-fg"]
+ENTRYPOINT ["Xvnc", ":1"]
