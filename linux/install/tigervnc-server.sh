@@ -13,11 +13,18 @@
 [ -z "$gid" ] && gid='0'
 [ -z "$sudoersgroup" ] && sudoersgroup='wheel'
 
-# TODO replace on packets and universal call
-yum groupinstall -y --setopt=tsflags=nodocs "X Window System" "Fonts" && \
-yum install -y --setopt=tsflags=nodocs tigervnc-server gnome-session metacity xterm sudo mc && \
-yum clean all && rm -rf /var/cache/yum/*
-   
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     xorg-x11-utils xorg-x11-server-Xorg
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     gnu-free-mono-fonts gnu-free-sans-fonts gnu-free-serif-fonts
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     tigervnc-server gnome-session metacity xterm sudo mc
+
 /bin/dbus-uuidgen --ensure
 
 export DISPLAY=":1"
