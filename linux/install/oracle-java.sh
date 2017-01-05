@@ -2,9 +2,9 @@
 ## Description: Install Oracle Java and set is as default java interpreter.
 
 ## HOW TO USE (as root):
-# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | sh /dev/stdin
+# curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | sh /dev/stdin
 ## OR
-# bundle=jdk7 sh -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | sh /dev/stdin'
+# bundle=jdk7 sh -c 'curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | sh /dev/stdin'
 
 
 # Java 7
