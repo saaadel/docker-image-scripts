@@ -17,10 +17,19 @@ curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-c
      xorg-x11-utils xorg-x11-server-Xorg
 
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     x11-utils x11-session-utils x11-xserver-utils xserver-xorg xserver-xorg-core
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
      dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts
 
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     fonts-dejavu-core
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
      gnu-free-mono-fonts gnu-free-sans-fonts gnu-free-serif-fonts
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     fonts-freefont-ttf
 
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
      tigervnc-server gnome-session metacity xterm sudo mc
