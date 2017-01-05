@@ -7,7 +7,7 @@
 
 yum clean all && \
 yum update -y && \
-( yum -y --setopt=tsflags=nodocs install which || true ) && \
+( yum -y --setopt=tsflags=nodocs install which 2>/dev/null || true ) && \
 yum -y --setopt=tsflags=nodocs install curl $* && \
 yum clean all && \
 rm -rf /var/cache/yum/*
