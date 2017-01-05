@@ -35,7 +35,7 @@ javadirname=`tar -ztf /tmp/curl.tmp | awk -F/ '{print $1}' | uniq | tail -1 | se
 tar -xzf /tmp/curl.tmp -C /opt
 rm -rf /tmp/curl.tmp
 
-alternatives=`which alternatives 2>/deb/null || which update-alternatives 2>/dev/null || /bin/echo 'alternatives'`
+alternatives=`which alternatives 2>/dev/null || which update-alternatives 2>/dev/null || /bin/echo 'alternatives'`
 
 # with console
 "$alternatives" --install /usr/bin/java java /opt/${javadirname}/bin/java 1
