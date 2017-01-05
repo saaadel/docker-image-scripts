@@ -7,6 +7,6 @@
 
 yum clean all && \
 yum update -y && \
-yum install -y --setopt=tsflags=nodocs curl sudo which $* && \
+yum install -y --setopt=tsflags=nodocs curl sudo which curl $* && \
 yum clean all && \
 rm -rf /var/cache/yum/*
