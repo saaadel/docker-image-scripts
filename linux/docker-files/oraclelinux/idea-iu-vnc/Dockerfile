@@ -1,7 +1,11 @@
 FROM oraclelinux:latest
 
-## Install 'which' for next calls
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/clean-update-install.sh | sh -x /dev/stdin
+RUN yum clean all && \
+    yum -y update && \
+    ( yum -y --setopt=tsflags=nodocs install which 2>/dev/null || true ) && \
+    yum -y --setopt=tsflags=nodocs install curl && \
+    yum clean all && \
+    rm -rf /var/cache/yum/*
 
 RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/nodejs.sh | sh -x /dev/stdin
 
