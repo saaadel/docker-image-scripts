@@ -1,9 +1,9 @@
 FROM ubuntu:latest
 
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -yq install curl
-RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -yq install which 2>/dev/null || true
-RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get -y update && \
+    ( DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -yq install which 2>/dev/null || true ) && \
+    DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -yq install curl && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/nodejs.sh | sh -x /dev/stdin
 
