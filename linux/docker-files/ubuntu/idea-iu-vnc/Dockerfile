@@ -5,17 +5,17 @@ apt-get --no-install-recommends install -y curl
 apt-get --no-install-recommends install -y which
 rm -rf /var/lib/apt/lists/*
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/nodejs.sh | sh -x /dev/stdin
+RUN curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/nodejs.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | sh -x /dev/stdin
+RUN curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | sh -x /dev/stdin
+RUN curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/maven.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | sh -x /dev/stdin
+RUN curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/gradle.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh -x /dev/stdin
+RUN curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | sh -x /dev/stdin
+RUN curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/tigervnc-server.sh | sh -x /dev/stdin
 
 RUN . /etc/profile.d/java-env.sh && \
     . /etc/profile.d/maven-env.sh && \
