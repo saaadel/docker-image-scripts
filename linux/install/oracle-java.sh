@@ -25,7 +25,7 @@ env_sh_filepath=/etc/profile.d/java-env.sh
 env_csh_filepath=/etc/profile.d/java-env.csh
 
 rm -rf /tmp/curl.tmp
-curl -sjkLo /tmp/curl.tmp -H "Cookie: oraclelicense=accept-securebackup-cookie" "${bundle_url}"
+curl -jkLo /tmp/curl.tmp -H "Cookie: oraclelicense=accept-securebackup-cookie" "${bundle_url}"
 
 ## tar.gz with one directory only inside
 javadirname=`tar -ztf /tmp/curl.tmp | awk -F/ '{print $1}' | uniq | tail -1 | sed 's:/*$::'`
