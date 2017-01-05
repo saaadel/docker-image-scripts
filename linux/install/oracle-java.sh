@@ -35,17 +35,19 @@ javadirname=`tar -ztf /tmp/curl.tmp | awk -F/ '{print $1}' | uniq | tail -1 | se
 tar -xzf /tmp/curl.tmp -C /opt
 rm -rf /tmp/curl.tmp
 
+alternatives=`which alternatives 2>/deb/null || which update-alternatives 2>/dev/null || /bin/echo 'alternatives'`
+
 # with console
-/usr/sbin/alternatives --install /usr/bin/java java /opt/${javadirname}/bin/java 1
-/usr/sbin/alternatives --set java /opt/${javadirname}/bin/java
+"$alternatives" --install /usr/bin/java java /opt/${javadirname}/bin/java 1
+"$alternatives" --set java /opt/${javadirname}/bin/java
 
 # web start
-/usr/sbin/alternatives --install /usr/bin/javaws javaws /opt/${javadirname}/bin/javaws 1
-/usr/sbin/alternatives --set javaws /opt/${javadirname}/bin/javaws
+"$alternatives" --install /usr/bin/javaws javaws /opt/${javadirname}/bin/javaws 1
+"$alternatives" --set javaws /opt/${javadirname}/bin/javaws
 
 # without console
-/usr/sbin/alternatives --install /usr/bin/javaw javaw /opt/${javadirname}/bin/javaw 1
-/usr/sbin/alternatives --set javaw /opt/${javadirname}/bin/javaw
+"$alternatives" --install /usr/bin/javaw javaw /opt/${javadirname}/bin/javaw 1
+"$alternatives" --set javaw /opt/${javadirname}/bin/javaw
 
 export JRE_HOME=/opt/${javadirname}
 export JAVA_HOME=/opt/${javadirname}
@@ -57,12 +59,12 @@ export PATH=$PATH:$JAVA_HOME/bin
 # if JDK
 if [ -n "$jdk" ]; then
     # compiler
-    /usr/sbin/alternatives --install /usr/bin/javac javac /opt/${javadirname}/bin/javac 1
-    /usr/sbin/alternatives --set javac /opt/${javadirname}/bin/javac
+    "$alternatives" --install /usr/bin/javac javac /opt/${javadirname}/bin/javac 1
+    "$alternatives" --set javac /opt/${javadirname}/bin/javac
 
     # archivator
-    /usr/sbin/alternatives --install /usr/bin/jar jar /opt/${javadirname}/bin/jar 1
-    /usr/sbin/alternatives --set jar /opt/${javadirname}/bin/jar
+    "$alternatives" --install /usr/bin/jar jar /opt/${javadirname}/bin/jar 1
+    "$alternatives" --set jar /opt/${javadirname}/bin/jar
 
     export JDK_HOME=/opt/${javadirname}
     export JRE_HOME=/opt/${javadirname}/jre
