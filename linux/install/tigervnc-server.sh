@@ -19,7 +19,14 @@ curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-c
      xorg-x11-utils xorg-x11-server-Xorg
 
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
-     x11-utils x11-session-utils x11-xserver-utils xserver-xorg xserver-xorg-core
+     x11-common x11-utils x11-session-utils x11-xserver-utils \
+     xserver-xorg-core
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     xfonts-base xfonts-100dpi xfonts-75dpi xfonts-x3270-misc
+
+curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
+     xfonts-cyrillic t1-cyrillic
 
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
      dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts
