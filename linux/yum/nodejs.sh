@@ -15,7 +15,7 @@ nodejs7=https://rpm.nodesource.com/setup_7.x
 curl -jkL "${bundle_url}" | bash -
 
 yum clean all && \
-yum update -y && \
+yum -y update && \
 yum -y --setopt=tsflags=nodocs install git subversion nodejs npm && \
 yum clean all && \
 rm -rf /var/cache/yum/*
