@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update
 RUN apt-get --no-install-recommends install -y curl
-RUN apt-get --no-install-recommends install -y which
+RUN apt-get --no-install-recommends install -y which || true
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/nodejs.sh | sh -x /dev/stdin
