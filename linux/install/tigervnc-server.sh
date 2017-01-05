@@ -84,7 +84,7 @@ unset SESSION_MANAGER\n\
 [ -x /usr/bin/xterm ] && xterm -geometry 132x44-10-10 -ls -title \"\$VNCDESKTOP Desktop\" &\n\
 [ -x /usr/bin/metacity ] && /usr/bin/metacity &\n\
 if test -z \"\$DBUS_SESSION_BUS_ADDRESS\" ; then\n\
-	eval \`dbus-launch --sh-syntax -–exit-with-session\`\n\
+	eval \`dbus-launch --sh-syntax --exit-with-session\`\n\
 	echo \"D-BUS per-session daemon address is: \\n\
 	\$DBUS_SESSION_BUS_ADDRESS\"\n\
 fi\n\
