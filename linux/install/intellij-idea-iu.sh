@@ -2,9 +2,9 @@
 ## Description: Install Intellij IDEA Ultimate.
 
 ## HOW TO USE (as root):
-# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh /dev/stdin
+# curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh /dev/stdin
 ## OR
-# bundle=intellij_idea_2016_3 sh -c 'curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh /dev/stdin'
+# bundle=intellij_idea_2016_3 sh -c 'curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/intellij-idea-iu.sh | sh /dev/stdin'
 
 
 intellij_idea_2016_3=https://download.jetbrains.com/idea/ideaIU-2016.3.1.tar.gz
@@ -16,7 +16,7 @@ env_sh_filepath=/etc/profile.d/idea-env.sh
 env_csh_filepath=/etc/profile.d/idea-env.csh
 
 rm -rf /tmp/curl.tmp
-curl -sjkLo /tmp/curl.tmp "${bundle_url}"
+curl -jkLo /tmp/curl.tmp "${bundle_url}"
 
 ## tar.gz with one directory only inside
 dirname=`tar -ztf /tmp/curl.tmp | awk -F/ '{print $1}' | uniq | tail -1 | sed 's:/*$::'`
