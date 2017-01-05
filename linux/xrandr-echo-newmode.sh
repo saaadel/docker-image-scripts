@@ -3,7 +3,7 @@
 
 
 ## HOW TO USE:
-# curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/xrandr-echo-newmode.sh | sh /dev/stdin
+# curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/xrandr-echo-newmode.sh | sh /dev/stdin
 
 
 if [ -z "$output" ]; then
