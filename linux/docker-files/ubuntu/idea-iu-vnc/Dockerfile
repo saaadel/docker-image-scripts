@@ -43,5 +43,4 @@ USER user
 ENV USER=user HOME=/home/user DISPLAY=":1"
 CMD []
 #ENTRYPOINT ["/usr/bin/vncserver", "-fg"]
-#ENTRYPOINT Xtightvnc :1 -desktop X -auth /home/user/.Xauthority -geometry 1024x768 -depth 24 -rfbwait 120000 -rfbauth /home/user/.vnc/passwd -rfbport 5901 -fp /usr/share/fonts/X11/misc/,/usr/share/fonts/X11/Type1/,/usr/share/fonts/X11/75dpi/,/usr/share/fonts/X11/100dpi/ -co /etc/X11/rgb
-ENTRYPOINT /usr/bin/vncserver && sleep 10 && waitpid=`ps a | grep X[^\s]*vnc | tail -1 | awk '{print $1; }'` && sh -c "while ps -p $waitpid 1>/dev/null 2>&1; do sleep 10; done"
+ENTRYPOINT /usr/bin/vncserver && sleep 10 && waitpid=`ps | grep X[^\s]*vnc | tail -1 | awk '{print $1; }'` && sh -c "while ps -p $waitpid 1>/dev/null 2>&1; do sleep 10; done"
