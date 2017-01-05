@@ -34,7 +34,7 @@ RUN . /etc/profile.d/java-env.sh && \
 
 #RUN echo '. ~/.dev-profile' >> ${HOME}/.bashrc
 
-
+RUN [ ! -d /mnt/docker-volume ] && mkdir /mnt/docker-volume
 VOLUME /mnt/docker-volume
 EXPOSE 5901
 LABEL io.openshift.expose-services="5901:tcp"
