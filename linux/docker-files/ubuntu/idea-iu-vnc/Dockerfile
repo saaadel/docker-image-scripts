@@ -1,9 +1,9 @@
 FROM ubuntu:latest
 
 ## Install 'which' for next calls
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/clean-update-install.sh | sh -x /dev/stdin
+RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/clean-update-install.sh | sh -x /dev/stdin
 
-RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/nodejs.sh | sh -x /dev/stdin
+RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/nodejs.sh | sh -x /dev/stdin
 
 RUN curl -sjkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-java.sh | sh -x /dev/stdin
 
