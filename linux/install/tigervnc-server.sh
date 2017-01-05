@@ -91,9 +91,9 @@ exec sudo /usr/bin/gnome-session\n\
 
 chown -R ${uid}:${gid} ${HOME} && \
 chmod 600 ${HOME}/.vnc/passwd && \
-chmod 775 ${HOME}/.vnc/xstartup && \
-mkdir /mnt/docker-volume
+chmod 775 ${HOME}/.vnc/xstartup
 
+# RUN [ ! -d /mnt/docker-volume ] && mkdir /mnt/docker-volume
 # VOLUME /mnt/docker-volume
 # EXPOSE 5901
 # LABEL io.openshift.expose-services="5901:tcp"
