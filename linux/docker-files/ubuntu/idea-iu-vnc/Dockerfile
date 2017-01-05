@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends install -yq curl
-RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends install -yq which || true
+RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -yq install curl
+RUN DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -yq install which || true
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/apt-get/nodejs.sh | sh -x /dev/stdin
