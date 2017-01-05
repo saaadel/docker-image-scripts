@@ -12,7 +12,7 @@
 [ -z "$uid" ] && uid='1001'
 [ -z "$gid" ] && gid='0'
 
-[ -z "$sudoersgroup" ] && sudoersgroup=`cut -d: -f1 /etc/group | grep sudo | tail -1`
+[ -z "$sudoersgroup" ] && sudoersgroup=`cut -d: -f1 /etc/group | grep sudo | sort | head -1`
 [ -z "$sudoersgroup" ] && sudoersgroup='wheel'
 
 curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-clean-update-install.sh | sh /dev/stdin \
