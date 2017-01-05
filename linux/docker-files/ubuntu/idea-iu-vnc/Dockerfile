@@ -40,5 +40,6 @@ EXPOSE 5901
 LABEL io.openshift.expose-services="5901:tcp"
 # USER ${USER}
 USER user
+ENV USER=user HOME=/home/user DISPLAY=":1"
 CMD []
 ENTRYPOINT ["/usr/bin/vncserver", "-fg"]
