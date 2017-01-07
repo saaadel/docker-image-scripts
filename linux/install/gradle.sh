@@ -20,7 +20,7 @@ curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-c
 rm -rf /tmp/curl.tmp
 curl -jkLo /tmp/curl.tmp "${bundle_url}"
 
-## tar.gz with one directory only inside
+## zip with one directory only inside
 dirname=`zipinfo -1 /tmp/curl.tmp | egrep '^[^/]+/?$' | tail -1 | sed 's:/*$::'`
 
 unzip -oqq /tmp/curl.tmp -d /opt
