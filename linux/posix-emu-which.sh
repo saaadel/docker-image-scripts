@@ -2,7 +2,7 @@
 ## Description: Provide which function if this command is not available
 
 ## HOW TO USE:
-# named_pipe=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32` && mkfifo $named_pipe && (curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/emu-which.sh > $named_pipe &) && . /dev/stdin < $named_pipe && rm -f $named_pipe
+# named_pipe=`cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c 32` && mkfifo $named_pipe && (curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/posix-emu-which.sh > $named_pipe &) && . /dev/stdin < $named_pipe && rm -f $named_pipe
 
 
 
