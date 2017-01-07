@@ -73,3 +73,6 @@ useradd  -u 500 -d /home/oracle -g dba -G dba,oinstall -m -s /bin/bash oracle
 echo oracle:oracle | chpasswd
 chown -R oracle:dba $ORACLE_BASE
 
+runuser -u oracle -c 'echo install here'
+
+
