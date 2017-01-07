@@ -2,9 +2,9 @@
 ## Description: Install Oracle Java and set is as default java interpreter.
 
 ## HOW TO USE (as root):
-# curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-database.sh | sh /dev/stdin
+# curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/oracle-database.sh | sh /dev/stdin
 ## OR
-# bundle=Enterprise_Edition_12c sh -c 'curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-database.sh | sh /dev/stdin'
+# bundle=Enterprise_Edition_12c sh -c 'curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/yum/oracle-database.sh | sh /dev/stdin'
 
 # Database 12c
 Enterprise_Edition_12c_Release_1of2=https://edelivery.oracle.com/akam/otn/linux/oracle12c/121020/linuxamd64_12102_database_1of2.zip
@@ -31,3 +31,22 @@ unzip -oqq /tmp/curl.tmp -d /opt && \
 rm -rf /tmp/curl.tmp
 
 echo /opt/$dirname/
+
+yum -y install oracle-rdbms-server-12cR1-preinstall unzip wget tar openssl
+yum clean all
+
+export ORACLE_BASE=/opt/oracle
+export ORACLE_HOME=/opt/oracle/product/12.1.0.2/dbhome_1
+
+export INSTALL_DIR=$ORACLE_BASE/install
+export PATH=$ORACLE_HOME/bin:$ORACLE_HOME/OPatch/:/usr/sbin:$PATH
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/usr/lib
+export CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+
+mkdir -p $ORACLE_BASE/oradata
+groupadd -g 500 dba
+groupadd -g 501 oinstall
+useradd  -u 500 -d /home/oracle -g dba -G dba,oinstall -m -s /bin/bash oracle
+echo oracle:oracle | chpasswd
+chown -R oracle:dba $ORACLE_BASE
+
