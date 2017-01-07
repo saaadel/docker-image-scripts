@@ -4,7 +4,7 @@
 ## HOW TO USE (as root):
 # curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-database.sh | sh /dev/stdin
 ## OR
-# bundle=EnterpriseEdition12c_Release sh -c 'curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-database.sh | sh /dev/stdin'
+# bundle=Enterprise_Edition_12c sh -c 'curl -jkL https://raw.githubusercontent.com/saaadel/scripts/master/linux/install/oracle-database.sh | sh /dev/stdin'
 
 # Database 12c
 Enterprise_Edition_12c_Release_1of2=https://edelivery.oracle.com/akam/otn/linux/oracle12c/121020/linuxamd64_12102_database_1of2.zip
